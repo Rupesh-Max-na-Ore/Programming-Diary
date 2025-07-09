@@ -19,6 +19,7 @@ def add_entry(entry_content, entry_date):
         connection.execute(
             "INSERT INTO entries VALUES (?,?);", (entry_content, entry_date)
         )
+        # do it like above instead of f strings to avaoid injection attacks
 
 
 def get_entries():
