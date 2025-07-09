@@ -1,4 +1,4 @@
-from database import add_entry, view_entries
+from database import add_entry, get_entries
 
 menu = """Please select one of the following options:
 1) Add new entry for today.
@@ -14,9 +14,16 @@ print(WELCOME)
 while (user_input := input(menu)) != "3":
     if user_input == "1":
         print("Adding...")
-        add_entry()
+
+        entry_content = input("What have you learned today? ")
+        entry_date = input("Enter the date: ")
+
+        add_entry(entry_content, entry_date)
     elif user_input == "2":
         print("Viewing...")
-        view_entries()
+
+        entries = get_entries()
+        for entry in entries:
+            print(f"{entry['date']} \n {entry['content']} \n\n")
     else:
         print("Invalid option, please try again!")
