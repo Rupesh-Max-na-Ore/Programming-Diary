@@ -4,5 +4,14 @@
     "python.linting.lintOnSave": true,
     "python.linting.lintOnTextChange": true,
     "python.linting.enabledLinters": ["ruff"],
-    "python.linting.ruffPath": "ruff"
+    "python.linting.ruffPath": "ruff",
+    // important
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit"
+        }
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
 }
