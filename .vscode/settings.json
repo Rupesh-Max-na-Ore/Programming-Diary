@@ -1,0 +1,8 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.lintOnTextChange": true,
+    "python.linting.enabledLinters": ["ruff"],
+    "python.linting.ruffPath": "ruff"
+}
