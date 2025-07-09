@@ -10,7 +10,7 @@ def create_table():
         )
 
 
-entries = []
+# entries = []
 
 
 def add_entry(entry_content, entry_date):
@@ -23,4 +23,7 @@ def add_entry(entry_content, entry_date):
 
 
 def get_entries():
-    return entries
+    # return entries
+    cursor = connection.cursor()
+    cursor.execute{"SELECT * FROM entries"}
+    return cursor.fetchall()
