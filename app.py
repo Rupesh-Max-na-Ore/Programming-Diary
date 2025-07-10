@@ -11,6 +11,10 @@ WELCOME = "Welcome to the programming diary!"
 
 
 def prompt_new_entry():
+    """
+    Prompts the user to enter what they have learned today and the date,
+    then adds the entry to the database using the add_entry function.
+    """
     entry_content = input("What have you learned today? ")
     entry_date = input("Enter the date: ")
 
@@ -18,6 +22,13 @@ def prompt_new_entry():
 
 
 def view_entries(entries):
+    """
+    Displays all diary entries passed as a list of tuples.
+    Each entry is printed with its date and content.
+
+    Args:
+        entries (list of tuple): List of diary entries, where each entry is a tuple (content, date).
+    """
     for entry in entries:
         print(f"{entry[1]} \n {entry[0]} \n\n")
 
